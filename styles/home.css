@@ -1,0 +1,98 @@
+#page-home{
+    height: 100vh; /*vh também é dinamico, altura*/
+
+    background: url('../assets/home-background.svg') no-repeat;
+    background-position: 35vw bottom; /*largura, altura, posição x e y, largura*/
+}
+#page-home .content{
+    width: 90%;  /*Largura da página, porcentagem é dinâmico*/
+    max-width: 1100px;  /*Largura máxima, px é fixo*/
+    height: 100%; /*margem lado direito*/
+    margin: 0 auto; /*laterais automatico em cima e embaixo 0*/
+    display: flex; /*posicionamento um ao lado do outro*/
+    flex-direction: column;
+}
+#page-home header{
+    margin-top: 48px;
+
+    display: flex; /*posicionamento, um ao lado do outro*/
+    align-items: center;  /*alinha os itens ao centro*/
+    justify-content: space-between; /*Justificar o conteúdo de dentro da caixa 'block'. Criar um espaço entre eles*/
+}
+#page-home header a{
+    display: flex; /*um elemento ao lado do outro*/
+    color: var(--title-color);
+    font-weight: 700; /*Fonte em negrito*/
+
+    /*text-decoration: none; para tirar o sublinhado apenas desse item está comentado aqui pq foi feito para todas as tags a no main.css*/
+}
+#page-home header a span{
+    margin-right: 16px;
+    display: flex;
+    background-image: url('../assets/log-in.svg');
+    width: 20px;
+    height: 20px;
+}
+#page-home main{
+    max-width: 560px;
+    flex: 1; /*altura de 600px anteriormente, que foi ajustada no content*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#page-home main h1{
+    font-size: 54px;
+    color: var(--title-color); /*Cor definida como variavel no mai.css, para ser repetida quantas vezes quizer no documento e caso queira mudar a cor muda apenas onde a variavel cor foi definida*/
+
+}
+#page-home main p{
+    font-size: 24px; /*Tamanho da fonte de texto. Textos tem: tamanho, tipo, espaçamentos, alinhamentos.*/
+    line-height: 38px; /*Altura da linha do texto (espaçamento)*/
+    margin-top: 28px;
+}
+#page-home main a{
+    width: 100%; /*configuração do botão pesquisar pontos de coleta, um botão no em a*/
+
+    max-width: 360px;
+    height: 72px;
+
+    border-radius: 8px; 
+    display: flex;/*um ao lado do outro*/
+    align-items: center; /*alinhado ao centro os elementos que estão um ao lado do outro*/
+
+    margin-top: 40px;
+
+    background-color: var(--primary-color);
+
+    transition: 400ms;
+
+    /*font-weight: bold;
+    color: white; */
+    
+}
+#page-home main a:hover{
+    background-color: #2fb86e;/*Quando passar o mouse o botão muda a cor*/
+}
+#page-home main a span{
+    width: 72px; /*Altura do span*/
+    height: 72px; /*largura do span*/
+    border-top-left-radius:8px; /*ajustando a bordar do botão*/
+    border-bottom-left-radius: 8px;/*ajustando a bordar do botão*/
+    background-color: rgba(0, 0, 0, 0.08);/*matén o span numa cor mais escura que o elemento a*/
+    
+    display: flex; /*botão do pseudo elemeto*/
+    align-items: center;
+    justify-content: center;
+
+}
+#page-home main a span::after{
+    content: ""; /*pseudo elemento criado com o uso do css, que não tem no html*/
+    background: url(../assets/search.svg);
+    width: 20px;
+    height: 20px;
+}
+#page-home main a strong{ /*strong, foi adicionado depois para poder aplicar o conceito de flex nos itens dentro do a*/
+    flex: 1;
+    color: white;
+    text-align: center;
+}
